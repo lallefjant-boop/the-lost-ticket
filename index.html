@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="The Lost Ticket: a free scratch-card desk game for Mac and Windows. Find your winning ticket among 100,000 recycled scratch cards.">
+<title>The Lost Ticket</title>
+<link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#"><img src="img/icon.png" alt="" width="40" height="40"><span>THE LOST TICKET</span></a>
+    <nav><a href="#how">How to install</a><a href="#safe">Safety</a><a href="#faq">FAQ</a></nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker">Free desk game for Mac &amp; Windows</p>
+        <h1>You threw away the winning ticket.</h1>
+        <p class="lead">It's somewhere in a recycled batch of <strong>100,000 scratch cards</strong>. Scratch them by hand, build a desk full of little machines, follow truthful clues, and claim your Grand Prize.</p>
+
+        <div class="download-box">
+          <a id="dl-main" class="btn-main" href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.0.0/TheLostTicket-mac.dmg" download>
+            <span id="dl-main-label">Download free</span>
+            <small id="dl-main-sub">for Mac or Windows</small>
+          </a>
+          <p class="alt-links" id="alt-links">
+            <a id="dl-mac" href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.0.0/TheLostTicket-mac.dmg" download>Mac (75 MB)</a>
+            <span aria-hidden="true">·</span>
+            <a id="dl-win" href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.0.0/TheLostTicket-windows.exe" download>Windows (115 MB)</a>
+          </p>
+          <p class="mobile-note" id="mobile-note" hidden>This game runs on Mac and Windows computers. Open this page on your computer to download it.</p>
+          <ul class="ticks">
+            <li>No account, email or password</li>
+            <li>No ads, no purchases, no tracking</li>
+            <li>Progress saves automatically</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="hero-shot">
+        <img src="img/operation.png" alt="The desk late in a run: auto scratchers, conveyors, a clue scanner and a bundle sorter around a scratch card on the felt mat." width="1280" height="720">
+      </figure>
+    </div>
+  </section>
+
+  <section class="started" id="started" hidden>
+    <div class="wrap">
+      <div class="started-card">
+        <h2>Your download has started</h2>
+        <p>When it finishes, follow the steps below. It only takes a moment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="wrap">
+      <h2>After the download</h2>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" id="tab-mac" aria-controls="steps-mac" aria-selected="true">Mac</button>
+        <button class="tab" role="tab" id="tab-win" aria-controls="steps-win" aria-selected="false">Windows</button>
+      </div>
+      <ol class="steps" id="steps-mac" role="tabpanel">
+        <li><b>Open</b> <code>TheLostTicket-mac.dmg</code> from your Downloads.</li>
+        <li><b>Drag</b> The Lost Ticket onto the <b>Applications</b> folder in the window that opens.</li>
+        <li><b>Open the game</b> from Applications. The first time, macOS may say it can't check the developer: open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b>. You only do this once.</li>
+        <li><b>Choose your name</b> and start scratching.</li>
+      </ol>
+      <ol class="steps" id="steps-win" role="tabpanel" hidden>
+        <li><b>Open</b> <code>TheLostTicket-windows.exe</code> from your Downloads (if your browser asks, choose <b>Keep</b>).</li>
+        <li>If you see <b>"Windows protected your PC"</b>, click <b>More info</b>, then <b>Run anyway</b>. You only do this once.</li>
+        <li><b>Choose your name</b> and start scratching.</li>
+      </ol>
+      <p class="why-note">Why the warning? The game isn't signed with a paid Apple or Microsoft developer certificate yet, so your computer can't recognise the publisher. It's the same warning every new indie game gets. See <a href="#safe">Safety</a> for how to verify your download.</p>
+    </div>
+  </section>
+
+  <section class="name-info">
+    <div class="wrap name-grid">
+      <div>
+        <h2>Your name, your progress</h2>
+        <p>The first time you open the game, you pick a name (up to 16 letters, numbers, <code>_</code> or <code>-</code>). That's it. No sign-up.</p>
+        <ul class="ticks">
+          <li>Names are checked: racist, homophobic, hateful or rude names are blocked, including sneaky spellings.</li>
+          <li>Your progress saves on its own every few seconds and when you quit.</li>
+          <li>The game remembers your computer, so next time it opens right where you left off.</li>
+        </ul>
+      </div>
+      <figure class="small-shot"><img src="img/scratch.png" alt="Scratching a Cherry Pop card on the felt mat." width="1280" height="720"></figure>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="wrap">
+      <h2>From a small desk to a ridiculous operation</h2>
+      <div class="cards">
+        <figure><img src="img/scratch.png" alt="" width="1280" height="720" loading="lazy"><figcaption><b>Scratch by hand.</b> 14 kinds of ticket, each with its own rules.</figcaption></figure>
+        <figure><img src="img/first-machine.png" alt="" width="1280" height="720" loading="lazy"><figcaption><b>Build machines.</b> Auto scratchers, vacuums, conveyors, filters.</figcaption></figure>
+        <figure><img src="img/clues.png" alt="" width="1280" height="720" loading="lazy"><figcaption><b>Follow clues.</b> The scanner never lies about where your ticket is.</figcaption></figure>
+        <figure><img src="img/grand-prize.png" alt="" width="1280" height="720" loading="lazy"><figcaption><b>Claim it.</b> Every machine stops so you can scratch the Grand Prize yourself.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="safe" id="safe">
+    <div class="wrap">
+      <h2>Safe to download</h2>
+      <ul class="ticks">
+        <li>No ads, no in-game purchases, no trackers. This page loads nothing from other websites.</li>
+        <li>The game doesn't ask for an email, password or payment details.</li>
+        <li>It works fully offline. If online leaderboards are switched on, the only things shared are your chosen name and your finishing times.</li>
+        <li>Everything in the game (art, sounds, music, code) was made for it. The font is Pixelify Sans under the SIL Open Font License.</li>
+      </ul>
+      <h3>Check your file</h3>
+      <p>Each file has a fingerprint (SHA-256). If yours matches, it's exactly the file published here.</p>
+      <div class="sums" id="sums">
+        <div><span>Mac</span><code id="sum-mac">e2b76ba1f59d70806125dbf8e862967fa212c1936bea6385fb9e6c4470a546ab</code></div>
+        <div><span>Windows</span><code id="sum-win">7a80eccb8ac165842b5a71a6e94595dc454a188077a85d21561c243e05ed5009</code></div>
+      </div>
+      <details>
+        <summary>How to check</summary>
+        <p><b>Mac:</b> open Terminal and run <code>shasum -a 256 ~/Downloads/TheLostTicket-mac.dmg</code></p>
+        <p><b>Windows:</b> open PowerShell and run <code>Get-FileHash $HOME\Downloads\TheLostTicket-windows.exe</code></p>
+        <p>The list is also in <a href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.0.0/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>Questions</h2>
+      <details><summary>Is it free?</summary><p>Yes. No ads and nothing to buy.</p></details>
+      <details><summary>Does it need the internet?</summary><p>No. You can play everything offline. The internet is only used for leaderboards when they're available.</p></details>
+      <details><summary>Where is my progress saved?</summary><p>On your computer. Mac: <code>~/Library/Application Support/Godot/app_userdata/The Lost Ticket</code>. Windows: <code>%APPDATA%\Godot\app_userdata\The Lost Ticket</code>. Two backup copies are kept, and a damaged save is repaired from them automatically.</p></details>
+      <details><summary>Can I change my name?</summary><p>You pick it once on your first launch. If it's already taken online, the game asks you to choose another and keeps your progress.</p></details>
+      <details><summary>Which computers does it run on?</summary><p>Mac with macOS 11 or newer (Apple chips and Intel). Windows 10 or 11, 64-bit.</p></details>
+      <details><summary>How long is a game?</summary><p>Finding the lost ticket usually takes about an hour the first time. After that you can prestige, unlock permanent upgrades and challenges, and chase faster times.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>The Lost Ticket · made with Godot · <a href="img/OFL-PixelifySans.txt">font license</a></p>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
