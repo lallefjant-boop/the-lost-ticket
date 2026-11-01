@@ -1,6 +1,20 @@
 /* The Lost Ticket download page. Night palette from the game; pixel art is
    shipped small and scaled with image-rendering: pixelated. */
 
+/* body text: the game's own pixel font (tools/site/gen_webfont.py), where 3, 5, 6, 8 and C never blur together;
+   16.5px is exactly 3 device pixels per font pixel on Retina screens */
+@font-face {
+  font-family: "LT Pixel";
+  src: url("img/LTPixel-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Pixel";
+  src: url("img/LTPixel-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
 @font-face {
   font-family: "Pixelify";
   src: url("img/PixelifySans.ttf") format("truetype");
@@ -38,8 +52,8 @@ html, body { margin: 0; overflow-x: hidden; overflow-x: clip; }
 body {
   background: var(--night);
   color: var(--cream);
-  font-family: "Pixelify", ui-monospace, "Courier New", monospace;
-  font-size: 18px;
+  font-family: "LT Pixel", "Pixelify", ui-monospace, "Courier New", monospace;
+  font-size: 16.5px;
   line-height: 1.55;
   cursor: url("img/art/cursor-arrow.png") 0 0, auto;
 }
@@ -468,3 +482,8 @@ footer .small { font-size: 14px; color: var(--muted); }
   .fly { animation: none !important; transform: rotate(var(--r)); }
   .logo-shine, .btn-main::after, .badge.t-platinum::after, .confetti { display: none; }
 }
+
+/* big headings keep the rounder display font; smaller ones (cards, lists) use the pixel font,
+   where Pixelify's C and 5 would read as O and S */
+h1, h2, .display { font-family: "Pixelify", "LT Pixel", ui-monospace, monospace; }
+h3 { font-family: "LT Pixel", "Pixelify", ui-monospace, monospace; }
