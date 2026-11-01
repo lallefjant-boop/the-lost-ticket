@@ -5,156 +5,363 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="The Lost Ticket: a free scratch-card desk game for Mac and Windows. Find your winning ticket among 100,000 recycled scratch cards.">
+<meta name="description" content="The Lost Ticket: a free scratch-card desk game for Mac and Windows. Find your winning ticket among 100,000 recycled scratch cards. A Goonboi. Games production.">
+<meta name="theme-color" content="#120d1f">
 <title>The Lost Ticket</title>
 <link rel="icon" href="img/favicon.png">
 <link rel="stylesheet" href="style.css">
+<script src="intro.js"></script>
 </head>
 <body>
-<header class="top">
+
+<div id="intro" aria-hidden="true">
+  <div class="intro-inner">
+    <img class="intro-logo" src="img/art/goonboi_logo.png" alt="" width="209" height="56">
+    <p class="intro-presents"><span id="intro-text"></span><i class="caret"></i></p>
+  </div>
+  <p class="intro-skip">click to skip</p>
+  <div class="intro-flash"></div>
+</div>
+
+<header class="top" id="top">
   <div class="wrap top-row">
-    <a class="brand" href="#"><img src="img/icon.png" alt="" width="40" height="40"><span>THE LOST TICKET</span></a>
-    <nav><a href="#how">How to install</a><a href="#safe">Safety</a><a href="#faq">FAQ</a></nav>
+    <a class="brand" href="#hero"><img src="img/icon.png" alt="" width="36" height="36"><span>THE LOST TICKET</span></a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#new">What's new</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-dl" href="#download">Download</a>
+    </nav>
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <p class="kicker">Free desk game for Mac &amp; Windows</p>
-        <h1>You threw away the winning ticket.</h1>
-        <p class="lead">It's somewhere in a recycled batch of <strong>100,000 scratch cards</strong>. Scratch them by hand, grow your <strong>luck</strong>, build a desk full of little machines and beat a crooked ticket broker to your Grand Prize.</p>
-
-        <div class="download-box">
-          <a id="dl-main" class="btn-main" href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.6/TheLostTicket-mac.dmg" download>
-            <span id="dl-main-label">Download free</span>
-            <small id="dl-main-sub">for Mac or Windows</small>
-          </a>
-          <p class="alt-links" id="alt-links">
-            <a id="dl-mac" href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.6/TheLostTicket-mac.dmg" download>Mac (75 MB)</a>
-            <span aria-hidden="true">·</span>
-            <a id="dl-win" href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.6/TheLostTicket-windows.exe" download>Windows (115 MB)</a>
-          </p>
-          <p class="mobile-note" id="mobile-note" hidden>This game runs on Mac and Windows computers. Open this page on your computer to download it.</p>
-          <ul class="ticks">
-            <li>No account, email or password</li>
-            <li>No ads, no purchases, no tracking</li>
-            <li>Progress saves automatically</li>
-          </ul>
-        </div>
-      </div>
-      <figure class="hero-shot">
-        <img src="img/operation.png" alt="The desk late in a run: auto scratchers, conveyors, a clue scanner and a bundle sorter around a scratch card on the felt mat." width="1280" height="720">
-      </figure>
+  <section class="hero" id="hero">
+    <div class="hero-sky" id="stars" aria-hidden="true"></div>
+    <div class="hero-street" aria-hidden="true"></div>
+    <div class="hero-cards" aria-hidden="true">
+      <img class="fly f1" src="img/art/ticket_cherry_pop.png" alt="" width="96" height="60">
+      <img class="fly f2" src="img/art/ticket_lucky_lane.png" alt="" width="96" height="60">
+      <img class="fly f3" src="img/art/ticket_gold_vault.png" alt="" width="96" height="60">
+      <img class="fly f4" src="img/art/ticket_moon_owl.png" alt="" width="96" height="60">
+      <img class="fly f5" src="img/art/ticket_back.png" alt="" width="96" height="60">
+      <img class="fly f6" src="img/art/ticket_seven_seas.png" alt="" width="96" height="60">
     </div>
+    <div class="wrap hero-copy">
+      <p class="kicker pop">A Goonboi. Games production</p>
+      <h1 class="logo-wrap">
+        <img class="logo" src="img/art/logo.png" alt="The Lost Ticket" width="240" height="96">
+        <span class="logo-shine" aria-hidden="true"></span>
+      </h1>
+      <p class="tagline pop">You threw away a million-dollar ticket. It's in here somewhere.</p>
+      <p class="lead pop">One recycled batch of <strong>100,000 scratch cards</strong>. Scratch by hand, grow your <strong>luck</strong>, build a desk full of machines and beat a crooked ticket broker to your Grand Prize.</p>
+
+      <div class="download-box pop">
+        <a id="dl-main" class="btn-main" href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.6/TheLostTicket-mac.dmg" download>
+          <i class="ic ic-coin" aria-hidden="true"></i>
+          <span class="btn-text"><span id="dl-main-label">Download free</span>
+          <small id="dl-main-sub">for Mac or Windows</small></span>
+        </a>
+        <p class="alt-links" id="alt-links">
+          <a id="dl-mac" href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.6/TheLostTicket-mac.dmg" download>Mac (75 MB)</a>
+          <span aria-hidden="true">·</span>
+          <a id="dl-win" href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.6/TheLostTicket-windows.exe" download>Windows (115 MB)</a>
+          <span aria-hidden="true">·</span>
+          <span class="ver">version <span class="js-version">1.2.6</span></span>
+        </p>
+        <p class="mobile-note" id="mobile-note" hidden>This game runs on Mac and Windows computers. Open this page on your computer to download it.</p>
+        <ul class="ticks inline">
+          <li>Free, no ads</li>
+          <li>No account</li>
+          <li>Saves automatically</li>
+        </ul>
+      </div>
+    </div>
+    <a class="scroll-hint" href="#scratch" aria-label="Scroll down"><span></span></a>
   </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>100,000 CARDS</span><span>1 LOST TICKET</span><span>LUCKY RUSH</span><span>GOLDEN CLOVERS</span><span>49 ACHIEVEMENTS</span><span>SECRET RARES</span><span>A CAT NAMED PICKLES</span><span>NO ADS</span>
+      <span>100,000 CARDS</span><span>1 LOST TICKET</span><span>LUCKY RUSH</span><span>GOLDEN CLOVERS</span><span>49 ACHIEVEMENTS</span><span>SECRET RARES</span><span>A CAT NAMED PICKLES</span><span>NO ADS</span>
+    </div>
+  </div>
 
   <section class="started" id="started" hidden>
     <div class="wrap">
       <div class="started-card">
         <h2>Your download has started</h2>
-        <p>When it finishes, follow the steps below. It only takes a moment.</p>
+        <p>When it finishes, follow the <a href="#install">steps below</a>. It only takes a moment.</p>
       </div>
     </div>
   </section>
 
-  <section class="how" id="how">
+  <section class="scratch" id="scratch">
+    <div class="wrap scratch-grid">
+      <div class="scratch-copy reveal">
+        <p class="kicker">Try it right here</p>
+        <h2>Scratch to win</h2>
+        <p>Every card in the game is scratched with your mouse: just move it over the silver, no clicking needed. This one's on the house. Scratch it with your mouse or finger.</p>
+        <p class="scratch-status" id="scratch-status" aria-live="polite">0% scratched</p>
+        <button class="btn-small" id="scratch-reset" type="button">New card</button>
+      </div>
+      <div class="scratch-card reveal" id="scratch-card">
+        <canvas id="scratch-canvas" width="480" height="300" aria-label="A scratch card. Scratch the silver to reveal the prize."></canvas>
+        <div class="scratch-win" id="scratch-win" hidden>
+          <p class="win-big">JACKPOT!</p>
+          <p>Serial No 0417-MM. That's <b>the</b> ticket.</p>
+          <a class="btn-small gold" href="#download">Claim it: download the game</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
     <div class="wrap">
-      <h2>After the download</h2>
-      <div class="tabs" role="tablist">
-        <button class="tab" role="tab" id="tab-mac" aria-controls="steps-mac" aria-selected="true">Mac</button>
-        <button class="tab" role="tab" id="tab-win" aria-controls="steps-win" aria-selected="false">Windows</button>
+      <p class="kicker reveal">From a small desk to a ridiculous operation</p>
+      <h2 class="reveal">What you'll be doing</h2>
+      <div class="feat-grid">
+        <article class="feat reveal tilt"><i class="ic ic-hand"></i><h3>Scratch by hand</h3><p>Move your mouse over the card and every symbol plays a note. Big wins explode into <b>BIG WIN</b>, <b>HUGE WIN</b> and <b>JACKPOT</b>, and 1 card in 25,000 is a rainbow <b>Secret Rare</b>.</p></article>
+        <article class="feat reveal tilt"><i class="ic ic-clover"></i><h3>Get LUCKY</h3><p>A four-leaf clover, a golden horseshoe, a rabbit's foot. LUCKY wins pay up to x10, losing cards get <b>Lucky Saves</b>, a full meter starts a <b>LUCKY RUSH</b>, and <b>Lucky Draw</b> makes the cheap cards stop showing up.</p></article>
+        <article class="feat reveal tilt"><i class="ic ic-golden"></i><h3>Catch the Golden Clover</h3><p>Every few minutes a golden clover drifts across the desk for 13 seconds. Click it for a cash bonus, an instant Lucky Rush or a full clover meter.</p></article>
+        <article class="feat reveal tilt"><i class="ic ic-machine"></i><h3>Build machines</h3><p>Auto scratchers, vacuums, conveyors, filters and sorters. Take on quick <b>jobs</b>, level up, and unlock sparkle trails and titles.</p></article>
+        <article class="feat reveal tilt"><i class="ic ic-magnifier"></i><h3>Follow the clues</h3><p>The clue scanner never lies about where your ticket is. Narrow 200 bundles down to one before Rex Dorsey gets there first.</p></article>
+        <article class="feat reveal tilt"><i class="ic ic-story"></i><h3>A story with a cat</h3><p>Dot runs the paper plant, Gus fixes the machines, Pickles the cat brings the luck. Design your own avatar and play your part, chapter by chapter.</p></article>
+        <article class="feat reveal tilt"><i class="ic ic-tree"></i><h3>Prestige &amp; perks</h3><p>Found it? Start over stronger. Spend Lucky Staples in a perk tree, collect trinkets, unlock challenges and chase faster times.</p></article>
+        <article class="feat reveal tilt"><i class="ic ic-trophy"></i><h3>49 achievements</h3><p>Bronze, silver, gold and platinum badges, from your first scratch to the ones you'll brag about. Some are secret.</p></article>
       </div>
-      <ol class="steps" id="steps-mac" role="tabpanel">
-        <li><b>Open</b> <code>TheLostTicket-mac.dmg</code> from your Downloads.</li>
-        <li><b>Drag</b> The Lost Ticket onto the <b>Applications</b> folder in the window that opens.</li>
-        <li><b>Open the game</b> from Applications. The first time, macOS may say it can't check the developer: open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b>. You only do this once.</li>
-        <li><b>Choose your name</b> and start scratching.</li>
-      </ol>
-      <ol class="steps" id="steps-win" role="tabpanel" hidden>
-        <li><b>Open</b> <code>TheLostTicket-windows.exe</code> from your Downloads (if your browser asks, choose <b>Keep</b>).</li>
-        <li>If you see <b>"Windows protected your PC"</b>, click <b>More info</b>, then <b>Run anyway</b>. You only do this once.</li>
-        <li><b>Choose your name</b> and start scratching.</li>
-      </ol>
-      <p class="why-note">Why the warning? The game isn't signed with a paid Apple or Microsoft developer certificate yet, so your computer can't recognise the publisher. It's the same warning every new indie game gets. See <a href="#safe">Safety</a> for how to verify your download.</p>
+
+      <div class="stats reveal">
+        <div><b class="count" data-to="100000">100,000</b><span>cards per batch</span></div>
+        <div><b class="count" data-to="15">15</b><span>kinds of ticket</span></div>
+        <div><b class="count" data-to="49">49</b><span>achievements</span></div>
+        <div><b class="count" data-to="1">1</b><span>lost ticket</span></div>
+      </div>
     </div>
   </section>
 
-  <section class="name-info">
-    <div class="wrap name-grid">
-      <div>
-        <h2>Your name, your progress</h2>
-        <p>The first time you open the game, you pick a name (up to 16 letters, numbers, <code>_</code> or <code>-</code>). That's it. No sign-up.</p>
-        <ul class="ticks">
-          <li>Names are checked: racist, homophobic, hateful or rude names are blocked, including sneaky spellings.</li>
-          <li>Your progress saves on its own every few seconds and when you quit.</li>
-          <li>The game remembers your computer, so next time it opens right where you left off.</li>
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <h2 class="reveal">Screenshots</h2>
+      <div class="shots">
+        <button class="shot reveal" type="button" data-full="img/operation.png"><img src="img/operation.png" alt="The desk late in a run: auto scratchers, conveyors, a clue scanner and a bundle sorter around a scratch card on the felt mat." width="1280" height="720" loading="lazy"></button>
+        <button class="shot reveal" type="button" data-full="img/shots/title.png"><img src="img/shots/title.png" alt="The title screen: the Lost Ticket logo over a night street outside Second Chance Paper Co." width="1280" height="720" loading="lazy"></button>
+        <button class="shot reveal" type="button" data-full="img/luck.png"><img src="img/luck.png" alt="A LUCKY win stamped on a card, with the luck panel and clover meter." width="1280" height="720" loading="lazy"></button>
+        <button class="shot reveal" type="button" data-full="img/shots/golden.png"><img src="img/shots/golden.png" alt="Catching a Golden Clover on the desk." width="1280" height="720" loading="lazy"></button>
+        <button class="shot reveal" type="button" data-full="img/story.png"><img src="img/story.png" alt="A story scene with Dot, the paper plant's owner." width="1280" height="720" loading="lazy"></button>
+        <button class="shot reveal" type="button" data-full="img/shots/avatar.png"><img src="img/shots/avatar.png" alt="The avatar creator: hair, eyes, outfits and colours." width="1280" height="720" loading="lazy"></button>
+        <button class="shot reveal" type="button" data-full="img/scratch.png"><img src="img/scratch.png" alt="Scratching a Cherry Pop card on the felt mat." width="1280" height="720" loading="lazy"></button>
+        <button class="shot reveal" type="button" data-full="img/first-machine.png"><img src="img/first-machine.png" alt="The first Auto Scratcher on the desk." width="1280" height="720" loading="lazy"></button>
+        <button class="shot reveal" type="button" data-full="img/clues.png"><img src="img/clues.png" alt="The clue scanner narrowing down where the ticket is." width="1280" height="720" loading="lazy"></button>
+        <button class="shot reveal" type="button" data-full="img/grand-prize.png"><img src="img/grand-prize.png" alt="The Grand Prize: every machine stops so you can scratch it yourself." width="1280" height="720" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="achievements" id="achievements">
+    <div class="wrap">
+      <p class="kicker reveal">New in 1.3</p>
+      <h2 class="reveal"><span id="badge-total">49</span> achievements. Some are brutal.</h2>
+      <p class="reveal sub">Every achievement is a badge: <span class="chip t-bronze"><span id="count-bronze">16</span> bronze</span> <span class="chip t-silver"><span id="count-silver">12</span> silver</span> <span class="chip t-gold"><span id="count-gold">13</span> gold</span> <span class="chip t-platinum"><span id="count-platinum">8</span> platinum</span> and <span id="count-secret">5</span> secrets you'll have to find yourself. Harder badges give more XP: up to ten times as much for platinum.</p>
+
+      <div class="pain reveal">
+        <h3>The hall of pain</h3>
+        <ul>
+          <li><img src="img/badges/speed_20.png" alt="" width="32" height="32"><div><b>Speed Demon</b><span>Claim the Grand Prize in under 20 minutes. A bot with every perk maxed averages 21.</span></div></li>
+          <li><img src="img/badges/perk_tree_max.png" alt="" width="32" height="32"><div><b>Fully Grown</b><span>Max out every perk in the prestige tree: 738 Lucky Staples, roughly ten full runs.</span></div></li>
+          <li><img src="img/badges/level_50.png" alt="" width="32" height="32"><div><b>Living Legend</b><span>Reach level 50.</span></div></li>
+          <li><img src="img/badges/completionist.png" alt="" width="32" height="32"><div><b>The Whole Ticket</b><span>Unlock every other achievement.</span></div></li>
+          <li class="rumour"><img src="img/badges/history_repeats.png" alt="" width="32" height="32"><div><b>???</b><span>Rumour has it the recycling bin at Second Chance Paper Co. has seen a winning ticket before. Throw it away again, if you dare.</span></div></li>
         </ul>
       </div>
-      <figure class="small-shot"><img src="img/scratch.png" alt="Scratching a Cherry Pop card on the felt mat." width="1280" height="720"></figure>
-    </div>
-  </section>
 
-  <section class="features">
-    <div class="wrap">
-      <h2>From a small desk to a ridiculous operation</h2>
-      <div class="cards">
-        <figure><img src="img/scratch.png" alt="" width="1280" height="720" loading="lazy"><figcaption><b>Scratch by hand.</b> Just move your mouse over the card, no clicking needed, and every symbol plays a note. Big wins explode into <b>BIG WIN</b>, <b>HUGE WIN</b> and <b>JACKPOT</b> moments, and there's a 1-in-25,000 rainbow <b>Secret Rare</b>.</figcaption></figure>
-        <figure><img src="img/luck.png" alt="" width="1280" height="720" loading="lazy"><figcaption><b>Get LUCKY.</b> Grow your luck with a four-leaf clover, a golden horseshoe and a rabbit's foot. LUCKY wins pay up to x10, losing cards get <b>Lucky Saves</b>, a full clover meter starts a <b>LUCKY RUSH</b>, and with <b>Lucky Draw</b> the cheap cards stop showing up. Catch the <b>Golden Clover</b> when it drifts by.</figcaption></figure>
-        <figure><img src="img/story.png" alt="" width="1280" height="720" loading="lazy"><figcaption><b>Meet the cast.</b> Dot runs the paper plant, Gus fixes the machines, Pickles the cat brings the luck, and Rex Dorsey wants your ticket. Design your own avatar and play your part: every stage is a new chapter.</figcaption></figure>
-        <figure><img src="img/first-machine.png" alt="" width="1280" height="720" loading="lazy"><figcaption><b>Build machines.</b> Auto scratchers, vacuums, conveyors, filters. Take on quick <b>jobs</b>, level up, and unlock sparkle trails and titles.</figcaption></figure>
-        <figure><img src="img/clues.png" alt="" width="1280" height="720" loading="lazy"><figcaption><b>Follow clues.</b> The scanner never lies about where your ticket is.</figcaption></figure>
-        <figure><img src="img/grand-prize.png" alt="" width="1280" height="720" loading="lazy"><figcaption><b>Claim it.</b> Every machine stops so you can scratch the Grand Prize yourself.</figcaption></figure>
+      <div class="ach-shots">
+        <button class="shot reveal" type="button" data-full="img/shots/achievements.png"><img src="img/shots/achievements.png" alt="The Achievements page in the game: badges by tier with progress bars." width="1280" height="720" loading="lazy"></button>
+        <button class="shot reveal" type="button" data-full="img/shots/platinum.png"><img src="img/shots/platinum.png" alt="A platinum badge unlocking in the game, with confetti." width="1280" height="720" loading="lazy"></button>
       </div>
-    </div>
-  </section>
 
-  <section class="safe" id="safe">
-    <div class="wrap">
-      <h2>Safe to download</h2>
-      <ul class="ticks">
-        <li>No ads, no in-game purchases, no trackers. This page loads nothing from other websites.</li>
-        <li>The game doesn't ask for an email, password or payment details.</li>
-        <li>It works fully offline. If online leaderboards are switched on, the only things shared are your chosen name and your finishing times.</li>
-        <li>Updates arrive by themselves: the game checks this website now and then (no personal data is sent) and only installs updates digitally signed by the developer. You can switch this off in Settings.</li>
-        <li>Everything in the game (art, sounds, music, code) was made for it. The font is Pixelify Sans under the SIL Open Font License.</li>
+      <div class="tier-tabs reveal" role="group" aria-label="Show badges">
+        <button type="button" class="tt on" data-tier="all">All</button>
+        <button type="button" class="tt" data-tier="platinum">Platinum</button>
+        <button type="button" class="tt" data-tier="gold">Gold</button>
+        <button type="button" class="tt" data-tier="silver">Silver</button>
+        <button type="button" class="tt" data-tier="bronze">Bronze</button>
+      </div>
+      <ul class="badges reveal" id="badges">
+<!-- BADGES:START -->
+        <li class="badge t-platinum" data-tier="platinum" tabindex="0"><img src="img/badges/speed_20.png" alt="" width="32" height="32" loading="lazy"><b>Speed Demon</b><span class="tier">Platinum</span><span class="line">Claim the Grand Prize in under 20 minutes.</span></li>
+        <li class="badge t-platinum" data-tier="platinum" tabindex="0"><img src="img/badges/perk_tree_max.png" alt="" width="32" height="32" loading="lazy"><b>Fully Grown</b><span class="tier">Platinum</span><span class="line">Max out every perk in the prestige tree.</span></li>
+        <li class="badge t-platinum" data-tier="platinum" tabindex="0"><img src="img/badges/all_sets.png" alt="" width="32" height="32" loading="lazy"><b>Museum Curator</b><span class="tier">Platinum</span><span class="line">Complete every collection set.</span></li>
+        <li class="badge t-platinum" data-tier="platinum" tabindex="0"><img src="img/badges/all_challenges.png" alt="" width="32" height="32" loading="lazy"><b>No Challenge Too Great</b><span class="tier">Platinum</span><span class="line">Complete every challenge.</span></li>
+        <li class="badge t-platinum" data-tier="platinum" tabindex="0"><img src="img/badges/lifetime_1m.png" alt="" width="32" height="32" loading="lazy"><b>Paper Planet</b><span class="tier">Platinum</span><span class="line">Process 1,000,000 cards (all runs together).</span></li>
+        <li class="badge t-platinum" data-tier="platinum" tabindex="0"><img src="img/badges/level_50.png" alt="" width="32" height="32" loading="lazy"><b>Living Legend</b><span class="tier">Platinum</span><span class="line">Reach the top level, 50.</span></li>
+        <li class="badge t-platinum" data-tier="platinum" tabindex="0"><img src="img/badges/completionist.png" alt="" width="32" height="32" loading="lazy"><b>The Whole Ticket</b><span class="tier">Platinum</span><span class="line">Unlock every other achievement.</span></li>
+        <li class="badge t-platinum secret" data-tier="platinum" tabindex="0"><img src="img/badges/speed_10.png" alt="" width="32" height="32" loading="lazy"><b>???</b><span class="tier">Platinum</span><span class="line">A secret achievement. Find it in the game.</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/set_complete.png" alt="" width="32" height="32" loading="lazy"><b>Completionist</b><span class="tier">Gold</span><span class="line">Complete a collection set.</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/challenger.png" alt="" width="32" height="32" loading="lazy"><b>Challenger</b><span class="tier">Gold</span><span class="line">Complete any challenge.</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/secret_rare.png" alt="" width="32" height="32" loading="lazy"><b>Secret Rare</b><span class="tier">Gold</span><span class="line">Find a Prismatic Secret card (about 1 in 25,000).</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/story_done.png" alt="" width="32" height="32" loading="lazy"><b>Case Closed</b><span class="tier">Gold</span><span class="line">Finish the story: claim the Grand Prize with Inspector Quill watching.</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/lucky_draw.png" alt="" width="32" height="32" loading="lazy"><b>Stacked Deck</b><span class="tier">Gold</span><span class="line">Raise Lucky Draw to grade 5: no budget or standard cards left.</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/speed_30.png" alt="" width="32" height="32" loading="lazy"><b>Express Delivery</b><span class="tier">Gold</span><span class="line">Claim the Grand Prize in under 30 minutes.</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/millionaire.png" alt="" width="32" height="32" loading="lazy"><b>Millionaire</b><span class="tier">Gold</span><span class="line">Have $1,000,000 in the bank at once.</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/lucky_1000.png" alt="" width="32" height="32" loading="lazy"><b>Charmed Life</b><span class="tier">Gold</span><span class="line">Get 1,000 LUCKY wins (all runs together).</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/golden_50.png" alt="" width="32" height="32" loading="lazy"><b>Clover Hunter</b><span class="tier">Gold</span><span class="line">Catch 50 Golden Clovers.</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/prestige_10.png" alt="" width="32" height="32" loading="lazy"><b>Lifer</b><span class="tier">Gold</span><span class="line">Prestige 10 times.</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/lifetime_100k.png" alt="" width="32" height="32" loading="lazy"><b>Paper Mountain</b><span class="tier">Gold</span><span class="line">Process 100,000 cards (all runs together).</span></li>
+        <li class="badge t-gold" data-tier="gold" tabindex="0"><img src="img/badges/level_25.png" alt="" width="32" height="32" loading="lazy"><b>Seasoned Scratcher</b><span class="tier">Gold</span><span class="line">Reach level 25.</span></li>
+        <li class="badge t-gold secret" data-tier="gold" tabindex="0"><img src="img/badges/history_repeats.png" alt="" width="32" height="32" loading="lazy"><b>???</b><span class="tier">Gold</span><span class="line">A secret achievement. Find it in the game.</span></li>
+        <li class="badge t-silver" data-tier="silver" tabindex="0"><img src="img/badges/first_craft.png" alt="" width="32" height="32" loading="lazy"><b>Tinkerer</b><span class="tier">Silver</span><span class="line">Craft a modification.</span></li>
+        <li class="badge t-silver" data-tier="silver" tabindex="0"><img src="img/badges/full_line.png" alt="" width="32" height="32" loading="lazy"><b>Assembly Line</b><span class="tier">Silver</span><span class="line">Recycle a card that went tray -&gt; scratcher -&gt; collector -&gt; recycler without touching it.</span></li>
+        <li class="badge t-silver" data-tier="silver" tabindex="0"><img src="img/badges/one_bundle.png" alt="" width="32" height="32" loading="lazy"><b>Narrowed Down</b><span class="tier">Silver</span><span class="line">Narrow the search to a single bundle.</span></li>
+        <li class="badge t-silver" data-tier="silver" tabindex="0"><img src="img/badges/overdrive_surge.png" alt="" width="32" height="32" loading="lazy"><b>Full Surge</b><span class="tier">Silver</span><span class="line">Fire a full Overdrive surge.</span></li>
+        <li class="badge t-silver" data-tier="silver" tabindex="0"><img src="img/badges/found_it.png" alt="" width="32" height="32" loading="lazy"><b>Found It!</b><span class="tier">Silver</span><span class="line">Claim the Grand Prize.</span></li>
+        <li class="badge t-silver" data-tier="silver" tabindex="0"><img src="img/badges/under_hour.png" alt="" width="32" height="32" loading="lazy"><b>Brisk Business</b><span class="tier">Silver</span><span class="line">Claim the Grand Prize in under 60 minutes.</span></li>
+        <li class="badge t-silver" data-tier="silver" tabindex="0"><img src="img/badges/processed_10k.png" alt="" width="32" height="32" loading="lazy"><b>Ten Thousand Cuts</b><span class="tier">Silver</span><span class="line">Process 10,000 cards in one run.</span></li>
+        <li class="badge t-silver" data-tier="silver" tabindex="0"><img src="img/badges/super_lucky.png" alt="" width="32" height="32" loading="lazy"><b>Written in the Stars</b><span class="tier">Silver</span><span class="line">Get a SUPER LUCKY win.</span></li>
+        <li class="badge t-silver" data-tier="silver" tabindex="0"><img src="img/badges/lucky_100.png" alt="" width="32" height="32" loading="lazy"><b>Lucky Streak</b><span class="tier">Silver</span><span class="line">Get 100 LUCKY wins (all runs together).</span></li>
+        <li class="badge t-silver" data-tier="silver" tabindex="0"><img src="img/badges/golden_10.png" alt="" width="32" height="32" loading="lazy"><b>Gold Rush</b><span class="tier">Silver</span><span class="line">Catch 10 Golden Clovers.</span></li>
+        <li class="badge t-silver" data-tier="silver" tabindex="0"><img src="img/badges/prestige_5.png" alt="" width="32" height="32" loading="lazy"><b>Old Hand</b><span class="tier">Silver</span><span class="line">Prestige 5 times.</span></li>
+        <li class="badge t-silver secret" data-tier="silver" tabindex="0"><img src="img/badges/pet_cat_100.png" alt="" width="32" height="32" loading="lazy"><b>???</b><span class="tier">Silver</span><span class="line">A secret achievement. Find it in the game.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/first_scratch.png" alt="" width="32" height="32" loading="lazy"><b>Scratch That</b><span class="tier">Bronze</span><span class="line">Reveal your first card.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/first_upgrade.png" alt="" width="32" height="32" loading="lazy"><b>Tooling Up</b><span class="tier">Bronze</span><span class="line">Buy your first upgrade.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/rare_win.png" alt="" width="32" height="32" loading="lazy"><b>Now We&#x27;re Talking</b><span class="tier">Bronze</span><span class="line">Claim a rare prize ($25+).</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/processed_100.png" alt="" width="32" height="32" loading="lazy"><b>Paper Pusher</b><span class="tier">Bronze</span><span class="line">Process 100 cards in one run.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/first_machine.png" alt="" width="32" height="32" loading="lazy"><b>It Moves!</b><span class="tier">Bronze</span><span class="line">Place an Auto Scratcher.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/first_scan.png" alt="" width="32" height="32" loading="lazy"><b>Getting Warmer (Truthfully)</b><span class="tier">Bronze</span><span class="line">Run your first clue scan.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/first_trinket.png" alt="" width="32" height="32" loading="lazy"><b>Curiosity</b><span class="tier">Bronze</span><span class="line">Find a trinket.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/lucky_first.png" alt="" width="32" height="32" loading="lazy"><b>Beginner&#x27;s Luck</b><span class="tier">Bronze</span><span class="line">Get your first LUCKY win.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/lucky_rush.png" alt="" width="32" height="32" loading="lazy"><b>Rush Hour</b><span class="tier">Bronze</span><span class="line">Start a Lucky Rush.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/golden_first.png" alt="" width="32" height="32" loading="lazy"><b>Pot of Gold</b><span class="tier">Bronze</span><span class="line">Catch a Golden Clover.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/pet_cat.png" alt="" width="32" height="32" loading="lazy"><b>Good Kitty</b><span class="tier">Bronze</span><span class="line">Pet Pickles 10 times.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/avatar_made.png" alt="" width="32" height="32" loading="lazy"><b>Looking Sharp</b><span class="tier">Bronze</span><span class="line">Make your avatar.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/new_run_first.png" alt="" width="32" height="32" loading="lazy"><b>Clean Slate</b><span class="tier">Bronze</span><span class="line">Start a new run.</span></li>
+        <li class="badge t-bronze" data-tier="bronze" tabindex="0"><img src="img/badges/prestige_first.png" alt="" width="32" height="32" loading="lazy"><b>Fresh Perspective</b><span class="tier">Bronze</span><span class="line">Prestige for the first time.</span></li>
+        <li class="badge t-bronze secret" data-tier="bronze" tabindex="0"><img src="img/badges/credits_end.png" alt="" width="32" height="32" loading="lazy"><b>???</b><span class="tier">Bronze</span><span class="line">A secret achievement. Find it in the game.</span></li>
+        <li class="badge t-bronze secret" data-tier="bronze" tabindex="0"><img src="img/badges/night_owl.png" alt="" width="32" height="32" loading="lazy"><b>???</b><span class="tier">Bronze</span><span class="line">A secret achievement. Find it in the game.</span></li>
+<!-- BADGES:END -->
       </ul>
-      <h3>Check your file</h3>
-      <p>Each file has a fingerprint (SHA-256). If yours matches, it's exactly the file published here.</p>
-      <div class="sums" id="sums">
-        <div><span>Mac</span><code id="sum-mac">7477ef17e81facc1b41f7244a797ec119fb67142eb15a00061b6303a7b8e542d</code></div>
-        <div><span>Windows</span><code id="sum-win">e248278c3d1807a04596bad5d340eef3b73b4f5d3e193622392afe710450989c</code></div>
+    </div>
+  </section>
+
+  <section class="new" id="new">
+    <div class="wrap">
+      <h2 class="reveal">What's new</h2>
+      <ol class="timeline">
+        <li class="reveal"><span class="v">1.3.0</span><div><b>Achievements &amp; badges.</b> 49 achievements in four tiers with their own badge art, progress bars and secrets, from your first scratch to finishing in under 20 minutes.</div></li>
+        <li class="reveal"><span class="v">1.2.6</span><div><b>Save and exit.</b> The menu asks whether to go back to the main menu or quit. Your run is saved either way.</div></li>
+        <li class="reveal"><span class="v">1.2.5</span><div><b>Faster updates.</b> The game checks for updates every time it starts and every hour while you play.</div></li>
+        <li class="reveal"><span class="v">1.2.4</span><div><b>Pixel cursor.</b> A gold arrow, a pointing hand and a scratching coin that shows your brush size. No more giant Mac pointer when you scratch fast.</div></li>
+        <li class="reveal"><span class="v">1.2.3</span><div><b>The clock waits for you.</b> Practice runs pause when you minimise the game or switch apps, and your machines are paid for the time away.</div></li>
+        <li class="reveal"><span class="v">1.2.2</span><div><b>New Run fixed.</b> The warning box on the title screen always opens properly.</div></li>
+        <li class="reveal"><span class="v">1.2.1</span><div><b>Fullscreen.</b> The game opens fullscreen, fitting your screen. F11 or Option+Return switches to a window.</div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="download" id="download">
+    <div class="wrap">
+      <h2 class="reveal">Download</h2>
+      <p class="reveal sub">Free. Version <span class="js-version">1.2.6</span>. Updates install themselves.</p>
+      <div class="platforms">
+        <a class="platform reveal" id="pf-mac" href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.6/TheLostTicket-mac.dmg" download>
+          <b>Mac</b><span>macOS 11 or newer · Apple chips and Intel</span><span class="size">TheLostTicket-mac.dmg · 75 MB</span><span class="go">Download</span>
+        </a>
+        <a class="platform reveal" id="pf-win" href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.6/TheLostTicket-windows.exe" download>
+          <b>Windows</b><span>Windows 10 or 11 · 64-bit</span><span class="size">TheLostTicket-windows.exe · 115 MB</span><span class="go">Download</span>
+        </a>
       </div>
-      <details>
-        <summary>How to check</summary>
-        <p><b>Mac:</b> open Terminal and run <code>shasum -a 256 ~/Downloads/TheLostTicket-mac.dmg</code></p>
-        <p><b>Windows:</b> open PowerShell and run <code>Get-FileHash $HOME\Downloads\TheLostTicket-windows.exe</code></p>
-        <p>The list is also in <a href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.6/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
-      </details>
+
+      <div class="install reveal" id="install">
+        <h3>After the download</h3>
+        <div class="tabs" role="tablist">
+          <button class="tab" role="tab" id="tab-mac" aria-controls="steps-mac" aria-selected="true">Mac</button>
+          <button class="tab" role="tab" id="tab-win" aria-controls="steps-win" aria-selected="false">Windows</button>
+        </div>
+        <ol class="steps" id="steps-mac" role="tabpanel">
+          <li><b>Open</b> <code>TheLostTicket-mac.dmg</code> from your Downloads.</li>
+          <li><b>Drag</b> The Lost Ticket onto the <b>Applications</b> folder in the window that opens.</li>
+          <li><b>Open the game</b> from Applications. The first time, macOS may say it can't check the developer: open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b>. You only do this once.</li>
+          <li><b>Choose your name</b> and start scratching.</li>
+        </ol>
+        <ol class="steps" id="steps-win" role="tabpanel" hidden>
+          <li><b>Open</b> <code>TheLostTicket-windows.exe</code> from your Downloads (if your browser asks, choose <b>Keep</b>).</li>
+          <li>If you see <b>"Windows protected your PC"</b>, click <b>More info</b>, then <b>Run anyway</b>. You only do this once.</li>
+          <li><b>Choose your name</b> and start scratching.</li>
+        </ol>
+        <p class="why-note">Why the warning? The game isn't signed with a paid Apple or Microsoft developer certificate yet, so your computer can't recognise the publisher. It's the same warning every new indie game gets. See <a href="#safe">Safety</a> for how to verify your download.</p>
+      </div>
+
+      <div class="two reveal">
+        <div class="panel">
+          <h3>Your name, your progress</h3>
+          <p>The first time you open the game, you pick a name (up to 16 letters, numbers, <code>_</code> or <code>-</code>). That's it. No sign-up.</p>
+          <ul class="ticks">
+            <li>Names are checked: racist, homophobic, hateful or rude names are blocked, including sneaky spellings.</li>
+            <li>Your progress saves on its own every few seconds and when you quit.</li>
+            <li>The game remembers your computer, so next time it opens right where you left off.</li>
+          </ul>
+        </div>
+        <div class="panel" id="safe">
+          <h3>Safe to download</h3>
+          <ul class="ticks">
+            <li>No ads, no in-game purchases, no trackers. This page loads nothing from other websites.</li>
+            <li>The game doesn't ask for an email, password or payment details.</li>
+            <li>It works fully offline. If online leaderboards are switched on, the only things shared are your chosen name and your finishing times.</li>
+            <li>Updates arrive by themselves: the game checks this website when it starts and every hour (no personal data is sent) and only installs updates digitally signed by the developer. You can switch this off in Settings.</li>
+            <li>Everything in the game (art, sounds, music, code) was made for it. The font is Pixelify Sans under the SIL Open Font License.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="check reveal">
+        <h3>Check your file</h3>
+        <p>Each file has a fingerprint (SHA-256). If yours matches, it's exactly the file published here.</p>
+        <div class="sums" id="sums">
+          <div><span>Mac</span><code id="sum-mac">7477ef17e81facc1b41f7244a797ec119fb67142eb15a00061b6303a7b8e542d</code></div>
+          <div><span>Windows</span><code id="sum-win">e248278c3d1807a04596bad5d340eef3b73b4f5d3e193622392afe710450989c</code></div>
+        </div>
+        <details>
+          <summary>How to check</summary>
+          <p><b>Mac:</b> open Terminal and run <code>shasum -a 256 ~/Downloads/TheLostTicket-mac.dmg</code></p>
+          <p><b>Windows:</b> open PowerShell and run <code>Get-FileHash $HOME\Downloads\TheLostTicket-windows.exe</code></p>
+          <p>The list is also in <a href="https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.6/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
+        </details>
+      </div>
     </div>
   </section>
 
   <section class="faq" id="faq">
     <div class="wrap">
-      <h2>Questions</h2>
-      <details><summary>Is it free?</summary><p>Yes. No ads and nothing to buy.</p></details>
-      <details><summary>Does it need the internet?</summary><p>No. You can play everything offline. The internet is only used for leaderboards when they're available.</p></details>
-      <details><summary>Where is my progress saved?</summary><p>On your computer. Mac: <code>~/Library/Application Support/Godot/app_userdata/The Lost Ticket</code>. Windows: <code>%APPDATA%\Godot\app_userdata\The Lost Ticket</code>. Two backup copies are kept, and a damaged save is repaired from them automatically.</p></details>
-      <details><summary>What's a Secret Rare?</summary><p>About 1 card in 25,000 is a rainbow Prismatic Secret worth $2,500 to $50,000 of in-game money. Rare wins like that stay on your desk as trophies; everything else is collected and recycled with one click.</p></details>
-      <details><summary>How do updates work?</summary><p>The game checks for a new version every few hours. Small updates download in the background and apply the next time you start the game (there's a "Restart now" button). Your progress is kept. If an update ever fails to start, the game switches back to the previous version by itself.</p></details>
-      <details><summary>Can I change my name?</summary><p>You pick it once on your first launch. If it's already taken online, the game asks you to choose another and keeps your progress.</p></details>
-      <details><summary>Which computers does it run on?</summary><p>Mac with macOS 11 or newer (Apple chips and Intel). Windows 10 or 11, 64-bit.</p></details>
-      <details><summary>How long is a game?</summary><p>Finding the lost ticket usually takes about an hour the first time. After that you can prestige, unlock permanent upgrades and challenges, and chase faster times.</p></details>
+      <h2 class="reveal">Questions</h2>
+      <details class="reveal"><summary>Is it free?</summary><p>Yes. No ads and nothing to buy.</p></details>
+      <details class="reveal"><summary>Does it need the internet?</summary><p>No. You can play everything offline. The internet is only used for leaderboards when they're available, and to check for updates.</p></details>
+      <details class="reveal"><summary>Where is my progress saved?</summary><p>On your computer. Mac: <code>~/Library/Application Support/Godot/app_userdata/The Lost Ticket</code>. Windows: <code>%APPDATA%\Godot\app_userdata\The Lost Ticket</code>. Two backup copies are kept, and a damaged save is repaired from them automatically.</p></details>
+      <details class="reveal"><summary>What's a Secret Rare?</summary><p>About 1 card in 25,000 is a rainbow Prismatic Secret worth $2,500 to $50,000 of in-game money. Rare wins like that stay on your desk as trophies; everything else is collected and recycled with one click.</p></details>
+      <details class="reveal"><summary>How do updates work?</summary><p>The game checks for a new version when it starts and every hour while you play. Small updates download in the background and apply the next time you start the game (there's a "Restart now" button). Your progress is kept. If an update ever fails to start, the game switches back to the previous version by itself.</p></details>
+      <details class="reveal"><summary>Can I change my name?</summary><p>You pick it once on your first launch. If it's already taken online, the game asks you to choose another and keeps your progress.</p></details>
+      <details class="reveal"><summary>Which computers does it run on?</summary><p>Mac with macOS 11 or newer (Apple chips and Intel). Windows 10 or 11, 64-bit.</p></details>
+      <details class="reveal"><summary>How long is a game?</summary><p>Finding the lost ticket usually takes about an hour the first time. After that you can prestige, unlock permanent upgrades and challenges, and chase faster times. Under 20 minutes earns a platinum badge.</p></details>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <p>The Lost Ticket · a Goonboi. Games production · made with Godot · <a href="img/OFL-PixelifySans.txt">font license</a></p>
+  <div class="wrap foot">
+    <img class="studio" src="img/art/goonboi_games.png" alt="Goonboi. Games" width="150" height="44">
+    <p><b>The Lost Ticket</b> · A Goonboi. Games production</p>
+    <p class="small">Made with <a href="https://godotengine.org">Godot Engine</a> (MIT license) · Font: Pixelify Sans by The Pixelify Sans Project Authors, <a href="img/OFL-PixelifySans.txt">SIL Open Font License</a> · No ads, no tracking.</p>
+    <p class="small"><a href="#hero">Back to the top</a></p>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" type="button" aria-label="Close">×</button>
+  <button class="lb-prev" type="button" aria-label="Previous">‹</button>
+  <img id="lb-img" src="img/operation.png" alt="">
+  <button class="lb-next" type="button" aria-label="Next">›</button>
+</div>
+
 <script src="site.js"></script>
 </body>
 </html>
