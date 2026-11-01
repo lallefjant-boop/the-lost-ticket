@@ -5,8 +5,8 @@
 
   // Edit these if the files are hosted elsewhere (e.g. GitHub Releases).
   var DOWNLOADS = {
-    mac: { href: "https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.1/TheLostTicket-mac.dmg", label: "Download for Mac", sub: "Free · 75 MB · macOS 11 or newer" },
-    win: { href: "https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.1/TheLostTicket-windows.exe", label: "Download for Windows", sub: "Free · 115 MB · Windows 10/11 64-bit" }
+    mac: { href: "https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.2/TheLostTicket-mac.dmg", label: "Download for Mac", sub: "Free · 75 MB · macOS 11 or newer" },
+    win: { href: "https://github.com/lallefjant-boop/the-lost-ticket/releases/download/v1.2.2/TheLostTicket-windows.exe", label: "Download for Windows", sub: "Free · 115 MB · Windows 10/11 64-bit" }
   };
 
   function detectOS() {
